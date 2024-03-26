@@ -4,7 +4,7 @@ import Logo from "../../components/Logo";
 
 import "./style.scss";
 
-const Menu = () => (
+const Menu = () => ( // Redirection vers les sections concernées
   <nav>
     <Logo />
     <ul>
