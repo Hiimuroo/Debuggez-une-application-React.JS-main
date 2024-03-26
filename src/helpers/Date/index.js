@@ -14,3 +14,4 @@ export const MONTHS = {
 };
 
 export const getMonth = (date) => MONTHS[date.getMonth()];
+// Tableau commence par 0, donc 0 correspond à janvier

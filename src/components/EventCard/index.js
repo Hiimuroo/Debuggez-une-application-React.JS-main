@@ -3,6 +3,8 @@ import { getMonth } from "../../helpers/Date";
 
 import "./style.scss";
 
+// Notre dernière prestation
+
 const EventCard = ({
   imageSrc,
   imageAlt,

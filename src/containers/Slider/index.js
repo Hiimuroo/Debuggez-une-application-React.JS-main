@@ -11,20 +11,20 @@ const Slider = () => {
     new Date(evtB.date) - new Date(evtA.date) // Date la plus éloigné - > proche
   );
 
-  const nextCard = () => {
+  const nextCard = () => { // Tableau de slides
     if (byDateDesc) {
       setIndex((idx) => (idx < byDateDesc.length - 1 ? idx + 1 : 0));
     }
   };
 
-  const handlePaginationClick = (selectedIndex) => { // Ajout de la fonction de gestion du clic
+  const handleClick = (selectedIndex) => { // Ajout de la fonction de gestion du clic
     setIndex(selectedIndex);
   };
 
-  useEffect(() => {
+  useEffect(() => { 
     const timer = setInterval(() => {
       nextCard();
-    }, 4000);
+    }, 4000); // 4 secondes avant le prochain slide
     return () => {
       clearInterval(timer);
     };
@@ -61,7 +61,7 @@ const Slider = () => {
               name="radio-button"
               checked={index === radioIdx}
               readOnly
-              onClick={() => handlePaginationClick(radioIdx)} // Ajout de l'écouteur de clic
+              onClick={() => handleClick(radioIdx)} // Ajout de l'écouteur de clic
             />
           ))}
         </div>
