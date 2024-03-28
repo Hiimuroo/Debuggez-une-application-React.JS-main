@@ -19,7 +19,7 @@ const Page = () => {
     ? data.events.reduce((latest, current) => {
         const latestDate = new Date(latest.date);
         const currentDate = new Date(current.date);
-        return currentDate > latestDate ? current : latest;
+        return currentDate > latestDate ? current : latest; // Recherche préçise de la date la plus récente à la plus loin puis on retourne la valeur voulue = latest ou current
       })
     : null;
 

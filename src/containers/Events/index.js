@@ -21,6 +21,9 @@ const EventList = () => {
       : data?.events
   ) || [];
 
+  // Trie les événements par date la plus éloignée comme sur slider
+  filteredEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   // Applique la pagination sur les événements filtrés
   const paginatedEvents = filteredEvents.slice(
     (currentPage - 1) * PER_PAGE,
